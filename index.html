@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Datalist and Select experiencing parallel lifes</title>
+    <link rel="stylesheet" href="./index.css">
+  </head>
+  <body>
+    <header>
+      <h2>Datalist and Select</h2>
+    </header>
+    <main>
+      <div class="container">
+        <label>Select Planet:
+        <input list="planetlist" id="myInput"/></label>
+        <datalist id="planetlist">
+          <option value="Mercury" />
+          <option value="Venus" />
+          <option value="Earth" />
+          <option value="Mars" />
+          <option value="Jupiter" />
+          <option value="Saturn" />
+          <option value="Uranus" />
+          <option value="Naptune" />
+          <option value="Pluto" />
+          <option value="Planet Nine" />
+        </datalist>
+      </div>
+      <div class="container">
+        <label>Select Planet:
+          <select id="aselect">
+            <optgroup label="Planets">
+            <option value="Mercury" >Mercury</option>
+            <option value="Venus" >Venus</option>
+            <option value="Earth" selected/>Earth</option>
+            <option value="Mars" />Mars</option>
+            <option value="Jupiter" />Jupiter</option>
+            <option value="Saturn" />Saturn</option>
+            <option value="Uranus" />Uranus</option>
+            <option value="Neptune" />Neptune</option>
+            <option value="Pluto" />Pluto</option>
+            </optgroup>
+            <optgroup label="Newly Discovered">
+              <option value="Planet Nine" />Planet Nine</option>
+            </optgroup>
+          </select>
+      </label>
+      </div>
+      <div id="container">
+        <input type="button" onclick="datalistAddMore()" value="Datalist element Add More" />
+        <input type="button" onclick="selectAddMore()" value="Select element Add More" />
+        <input type="button" onclick="datalistShowSelected()" value="Datalist element Show Selected" />
+        <input type="button" onclick="selectShowSelected()" value="Select element Show Selected" />
+      </div>
+    </main>
+    <script src="./index.js" charset="utf-8"></script>
+  </body>
+</html>
